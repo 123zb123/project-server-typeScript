@@ -7,12 +7,12 @@ import usersRouter from './api/users/router.users';
 const port = 8200;
 const app = express();
 
-app.use(express.json()); // Use the express.json() middleware for parsing JSON
+app.use(express.json()); 
 app.use(morgan('dev'));
 
 const corsOptions: cors.CorsOptions = {
-    origin: 'https://example-store.netlify.app', // Replace with your actual frontend URL
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    origin: 'https://example-store.netlify.app',
+    methods: 'GET,HEAD,PUT,patch,POST,DELETE',
     credentials: true,
     optionsSuccessStatus: 204,
 };
